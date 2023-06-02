@@ -32,3 +32,5 @@ CREATE VIEW [dbo].[NAME_DEPARTMENT]
 AS
 SELECT Name FROM AA group by NAME;
 GO
+
+---Modificado a View AA com o nome de todos os departamentos para a View Name_Department--
