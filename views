@@ -1,1 +1,34 @@
 
+USE [AdventureWorks2019]
+GO
+
+/****** Object:  View [dbo].[AA]    Script Date: 02/06/2023 18:38:09 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[AA]
+AS
+SELECT A.DepartmentID,A.GroupName,A.Name, B.Gender,B.BusinessEntityID,B.NationalIDNumber,B.SalariedFlag,C.EndDate, C.ModifiedDate, C.StartDate
+
+FROM HumanResources.Department A,HumanResources.Employee B ,HumanResources.EmployeeDepartmentHistory C ; 
+GO
+
+
+
+USE [AdventureWorks2019]
+GO
+
+/****** Object:  View [dbo].[NAME_DEPARTMENT]    Script Date: 02/06/2023 18:37:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[NAME_DEPARTMENT]
+AS
+SELECT Name FROM AA group by NAME;
+GO
